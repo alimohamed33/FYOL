@@ -1,5 +1,15 @@
+import Header from './components/Header';
+import Home from './pages/Home';
+import Footer from './components/Footer';
+
 function App() {
-  return <h1 className="">Hello world!</h1>;
+  return (
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
