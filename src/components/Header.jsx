@@ -1,12 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
+import { navLinks } from "../../public/data";
 
 function Header() {
-  const [links] = useState(['Features', 'Team', 'Signin']);
+  const [links] = useState(navLinks);
   const headerRef = useRef();
 
   useEffect(function () {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 100) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 1) {
         headerRef.current.style.cssText = `
           background-color:#0c1524;
           padding:20px 0;
@@ -25,7 +26,7 @@ function Header() {
       className="pt-[60px] fixed top-0 left-0 w-full z-50 transition-all duration-200"
       ref={headerRef}
     >
-      <div className="container mx-auto flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row">
+      <div className="container flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row">
         <a href="/">
           <img src="/src/assets/images/logo.svg" alt="Logo" />
         </a>
